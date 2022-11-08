@@ -152,7 +152,7 @@ controller_templates:
           type: text
           variable: HOSTS
           required: false
-        - question_name: PowerShell Script 
+        - question_name: PowerShell Script
           type: textarea
           variable: ps_script
           default: "Get-Service | Where-Object -FilterScript {$_.Status -eq 'running'} | Select-Object -Property 'Name'"
@@ -228,6 +228,10 @@ controller_templates:
           type: text
           variable: HOSTS
           required: false
+        - question_name: Safe Mode Password
+          type: password
+          variable: safe_mode_password
+          required: true
 
   - name: "WINDOWS / AD / New User"
     job_type: run
